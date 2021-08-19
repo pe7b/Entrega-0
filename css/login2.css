@@ -1,0 +1,47 @@
+body {
+    height: 100%;
+}
+ 
+.global-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(89, 248, 155, 0.692);
+background: radial-gradient(circle, rgba(243, 252, 120, 0.74) 0%, rgba(68, 235, 165, 0.658) 100%);
+}
+ 
+form {
+    padding-top: 10px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+ 
+.card-title {
+    font-weight: 300;
+}
+ 
+.btn {
+    font-size: 14px;
+    margin-top: 20px;
+}
+ 
+.login-form {
+    width: 330px;
+    margin: 20px;
+}
+ 
+.sign-up {
+    text-align: center;
+    padding: 20px 0 0;
+}
+ 
+.alert {
+    margin-bottom: -30px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+span {color: red;}
+
+.error {border: 2px solid red; border-radius: 2px;}

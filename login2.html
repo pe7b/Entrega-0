@@ -1,0 +1,53 @@
+<!DOCTYPE html
+	
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Ejercicio práctica de JS</title>
+	<script src="login_script.js" type="text/javascript"></script>
+    <link rel="stylesheet"  href="css/login2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+</head>
+
+</head>
+
+<body>
+    <div class="global-container">
+        <div class="card login-form">
+            <div class="card-body">
+                <h3 class="card-title text-center">LogIn </h3>
+                <div class="card-text">
+                    <!--
+                <div class="alert alert-danger alert-dismissible fade show" 
+                 role="alert">Incorrect username or password.</div> -->
+                    <form action="index.html">
+                        <!-- to error: add class "has-danger" -->
+                        <div class="form-group">
+                            <label id="emailL" for="exampleInputEmail1">Email</label>
+
+                            <input onblur="cargarErrores('emailInput','msjEmial') required type="email" id="emailInput" class="form-control form-control-sm"
+                        id="inputEmail" aria-describedby="emailHelp">
+                        <span id="msjEmail"></span> <br>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <a href="#" style="float:right;font-size:12px;">Olvido su contraseña?</a>
+                            <input required type="password" class="form-control form-control-sm"
+                  id="inputPassword">
+                        </div>
+                        <button type="submit" onblur="cargarErrores('emailInput','msjEmial')" onclick="cargarErrores(emailL)" class="btn btn-primary btn-block" href=    >Loguear</button>
+     
+                        <div class="sign-up">
+                            No tienes una cuenta? 
+                         <ahref="https://w3schoolweb.com/bootstraplogin-page/">Crear una</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
