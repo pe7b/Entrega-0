@@ -57,16 +57,20 @@ function showList(){
             ((maxCost == undefined) || (maxCost != undefined && parseInt(mostrando.cost) <= maxCost))){
                 
         listaAutos += `
-        <div>
+        <div class="list-group-item list-group-item-action">
+            <div class="col-7">
             <img src="` + mostrando.imgSrc + `" alt="` + mostrando.description + `" class="img-thumbnail">
+            </div>
         </div>
-        <div>
+        <div class="list-group-item list-group-item-action">
             <h4>`+ mostrando.name +`</h4> 
             <p> `+ mostrando.currency + mostrando.cost +`</p>
             <p> `+ mostrando.description +`</p>
             <p> `+ mostrando.soldCount + `<p>
             <br>
             </div>
+            <br>
+            <br>
         </div>
         `
         document.getElementById("listado").innerHTML = listaAutos; 
