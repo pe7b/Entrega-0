@@ -47,9 +47,12 @@ function sortCategories(criterio, array) {
 function showList(){
 
     let listaAutos = "";
+    document.getElementById("listado").innerHTML = listaAutos; 
     for(let i = 0; i < currentCategoriesArray.length; i++){
         let mostrando = currentCategoriesArray[i]
         
+       
+
         if (((minCost == undefined) || (minCost != undefined && parseInt(mostrando.cost) >= minCost)) &&
             ((maxCost == undefined) || (maxCost != undefined && parseInt(mostrando.cost) <= maxCost))){
                 
@@ -67,8 +70,10 @@ function showList(){
         </div>
         `
         document.getElementById("listado").innerHTML = listaAutos; 
+        
         }
     }
+    
 }
 
 
@@ -136,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         maxCost = document.getElementById("rangeFilterCountMax").value;
 
         if ((minCost != undefined) && (minCost != "") && (parseInt(minCost)) >= 0){
-            minCount = parseInt(minCost);
+            minCost = parseInt(minCost);
         }
         else{
             minCost = undefined;
