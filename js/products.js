@@ -43,26 +43,31 @@ function sortCategories(criterio, array) {
     return arraySorted;
 }
 
+function showID(clicked_id)
+{
+    sessionStorage.setItem("pSelect", clicked_id)
+}
 
 function showList(){
 
+    let pSelect = 0;
     let listaAutos = "";
     document.getElementById("listado").innerHTML = listaAutos; 
     for(let i = 0; i < currentCategoriesArray.length; i++){
         let mostrando = currentCategoriesArray[i]
+        pSelect++;
         
-       
 
         if (((minCost == undefined) || (minCost != undefined && parseInt(mostrando.cost) >= minCost)) &&
             ((maxCost == undefined) || (maxCost != undefined && parseInt(mostrando.cost) <= maxCost))){
                 
         listaAutos += `
-        <div class="list-group-item list-group-item-action">
-            <div class="col-7">
+        <div id="`+pSelect+`"  class="list-group-item list-group-item-action" onclick="showID(this.id); window.location ='product-info.html';">
+            <div class="col-7" id="productSelect" onclick="window.location ='product-info.html'; showID(this.id) ">
             <img src="` + mostrando.imgSrc + `" alt="` + mostrando.description + `" class="img-thumbnail">
             </div>
         </div>
-        <div class="list-group-item list-group-item-action">
+        <div class="list-group-item list-group-item-action" onclick="">
             <h4>`+ mostrando.name +`</h4> 
             <p> `+ mostrando.currency + mostrando.cost +`</p>
             <p> `+ mostrando.description +`</p>
@@ -73,6 +78,7 @@ function showList(){
             <br>
         </div>
         `
+        
         document.getElementById("listado").innerHTML = listaAutos; 
         
         }
@@ -164,4 +170,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
     });
 });
+
+
+    
 

@@ -16,6 +16,24 @@
 
 }
 
+.containerDos {
+  width: 50%;
+  max-width: none;
+}
+
+
+
+.caja {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  background: #ffffff25;
+  margin: 0 0 3px;
+  overflow: hidden;
+  padding: 2px;
+  }
+
 .jumbotron {
   height: 50vh;
   padding: 5em inherit;

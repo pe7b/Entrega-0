@@ -15,7 +15,7 @@
   <link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: rgba(186, 194, 194, 0.342);">
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
@@ -26,19 +26,72 @@
       <a class="py-2 d-none d-md-inline-block" id="userLoged" href="my-profile.html"></a>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+
+  <div class="container" style="padding-top: 20px;">
+
+    <h3 id="titulo" style="text-align: center;"></h3>
+
+    <hr class="my-4">
+
+    <div class="row" style="background-color: rgba(102, 102, 102, 0.164); padding: 15px; " >
+      <div class="col-md-8">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" id="productImg">
+
+          </div>
+            
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        
+        </div>
+      </div>
+      <div class="col-md-4">
+        <dl id="dl" class=".justify-content-*">
+          
+          <dt class="caja" id="descripcion"></dt><br>
+          <dt class="caja" id="precio"></dt><br>
+          <dt class="caja" id="moneda"></dt><br>
+          <dt class="caja" id="relevancia"></dt><br>
+          <dt class="caja" id="categoria"></dt><br>
+          <dt class="caja" id="prodRelacionados"></dt><br>
+          <div class="row text-center text-lg-left pt-2">
+        </dl>
+      </div>
     </div>
-  </div>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Volver arriba</a>
-      </p>
+
+      <br>
+        <div class="container" style="background-color: rgba(102, 102, 102, 0.034); padding: 15px; ">
+          <h2>Comentarios del producto:</h2>
+          <dt class="col-8" id="comentarios"></dt>
+        
+
+  <form class="col-5">
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Calificacion</label>
+        <select class="form-control" id="comentPuntos">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Comentario</label>
+        <textarea class="form-control" id="comentTextArea" rows="3"></textarea>
+        <span id="error" style="color: red;"></span>
+    </div>
+    <button id="newComent" type="button" >Enviar comentario</button>
+</form>
+</div>
+<br><br><br>
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
