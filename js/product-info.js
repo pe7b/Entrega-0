@@ -1,10 +1,91 @@
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
+let relatedP1;
+let relatedP2
+function showList(){
+        
+    let pSelect = 0;
+    let listaAutos = "";
+    document.getElementById("listadoRelated").innerHTML = listaAutos; 
+
+    
+       
+        
+        
+    
+    listaAutos += `
+            <div class="cajaSecundaria">
+            <h3> Productos relacionados: </h3>
+            `
+
+           
+            
+            
+
+    for(let i = 0; i < listaArray.length; i++){
+        let mostrando = listaArray[i]
+        pSelect++;
+        
+        //alert(relatedP2)
+        
+        if ((i == [1]) || (i == [3]))
+           {
+                
+        listaAutos += `
+            
+        <div class=" list-group-item " onclick="window.location ='product-info.html';" id="productSelect" "  >
+        <p class="col-6">
+            <img align="left" src="` + mostrando.imgSrc + `" alt="` + mostrando.description + `" class="col-6 img-thumbnail">
+
+            <h4 class="col-6">`    + mostrando.name +`</h4> 
+              `+ mostrando.currency + mostrando.cost +` <br>
+             `+ mostrando.description +`
+            `+ mostrando.soldCount + `</p>
+            </div>
+            <br>
+        `
+        
+        document.getElementById("listadoRelated").innerHTML = listaAutos + `</div>`; 
+        
+        }
+    }
+    
+}
+
 document.addEventListener("DOMContentLoaded", function (e) {
+
+    getJSONData(PRODUCTS_URL).then(function(resultObj){
+        
+   
+        listaArray = resultObj.data;
+        var currentCategoriesArray = listaArray;
+
+        showList(listaArray);
+
+   
+});
+
+    function getRelated(){
+        getJSONData(PRODUCT_INFO_URL).then(function (resultObj) {
+            if (resultObj.status === "ok") {
+               let producto = resultObj.data;
+                relatedP1 = producto.relatedProducts[0];
+                relatedP2 = producto.relatedProducts[1];
+                
+            }
+            return relatedP1, relatedP2;
+    
+        });
+
+    }
+
+
     getJSONData(PRODUCT_INFO_URL).then(function (resultObj) {
         if (resultObj.status === "ok") {
            let producto = resultObj.data;
+            relatedP1 = producto.relatedProducts[0];
+            relatedP2 = producto.relatedProducts[1];
             
             i=sessionStorage.getItem('pSelect');
 
@@ -16,13 +97,17 @@ document.addEventListener("DOMContentLoaded", function (e) {
             document.getElementById("relevancia").innerHTML = "Relevancia: " + producto.soldCount;
             document.getElementById("prodRelacionados").innerHTML = "Productos relacionados: " + producto.relatedProducts;
 
+            
 
             showImages(producto.images)
 
         }
+        
 
     });
 });
+
+
 
 function showImages(array){
     let imagenesAMostrar = "";

@@ -22,8 +22,15 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a class="py-2 d-none d-md-inline-block" id="userLoged" href="my-profile.html"></a>
+      <div class="dropdown ">
+        <button id="userLoged" class="dropbtn ">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="cart.html">Ver mi carrito</a>
+          <a href="my-profile.html">Mi perfil</a>
+          <a href="login.html">Cerrar sesión</a>
+        </div>
+      </div>
+      
     </div>
   </nav>
 
@@ -63,7 +70,9 @@
           <dt class="caja" id="prodRelacionados"></dt><br>
           <div class="row text-center text-lg-left pt-2">
         </dl>
+        
       </div>
+      <div class="col-8 "  id="listadoRelated"></div>
     </div>
 
       <br>

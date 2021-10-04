@@ -5,6 +5,7 @@ miStorage = window.localStorage;
 
 document.addEventListener("DOMContentLoaded", function(e){
 
+    sessionStorage.removeItem("user")
     
     document.getElementById("idIngresar").addEventListener("click", formularioV); })
         
