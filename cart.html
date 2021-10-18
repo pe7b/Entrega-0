@@ -51,12 +51,62 @@
       
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <div id="general" class="card col-9" style="margin: 40px; background-color: rgba(104, 162, 238, 0.212);">
+    <div class=" pt-3 center"  >
+      <table class="table table-striped " style="background-color: rgba(255, 255, 255, 0.678);">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio</th>
+                <th scope="col">SubTotal</th>
+                <th scope="col">IVA(22%)</th>
+            </tr>
+            
+            <tbody class="col-2" id="micarrito">
+            </tbody>
+        </thead>
+        
+      </table>
+
+      <table class="card col-1" style="float: right; margin-bottom: 10px; margin-right: 15px;">
+        <div class="col-8">
+                 
+          <tr  class="col-15 "> 
+          <th  class="" > Total:  </th> 
+          
+          </tr>
+          <tr class="col-15 "> 
+          <th id="subtotal" class=""></th> 
+          </tr>
+         
+          </div>
+
+          <div class="d-block my-3">
+            <div class="custom-control custom-radio">
+              <input id="premium" name="tEnvio" type="radio" class="custom-control-input" value="0.15" required="" checked>
+              <label class="custom-control-label" for="premium">Premium (2-5 días) - Costo del 15% sobre el subtotal.</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="express" name="tEnvio" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label" for="express">Express (5-8 días) - Costo del 7% sobre el subtotal.</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="standard" name="tEnvio" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label" for="standard">Standard (12 a 15 días) - Costo del 5% sobre el subtotal.</label>
+            </div>
+            
+            <select class="card" style="margin: 15px;" name="" id="metodo">Metodo de pago
+            <option value="">Tarjeta de credito</option>
+            <option value="">Transferencia bancaria</option>
+            </select>
+          </div>
+
+      </table>
+
+     
+     <button id="" class="btn btn-success" style="margin: 15px; " > Pagar </button>
     </div>
   </div>
   <div id="spinner-wrapper">
@@ -72,6 +122,8 @@
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/ingresostorage.js"></script>
 </body>
 
 </html>
