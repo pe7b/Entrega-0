@@ -11,7 +11,7 @@
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
+  <link href="styles.css" rel="stylesheet">
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -51,14 +51,85 @@
       
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  
+
+
+    <div class="container" >
+      <div class="cardL" >
+      <div class="col-md-5" >
+        <div class="profile-sidebar" >
+          <!-- SIDEBAR USERPIC -->
+          <div style="align-content: center;" class="profile-userpic">
+            <img src="https://e7.pngegg.com/pngimages/556/580/png-clipart-computer-icons-symbol-user-profile-logo-symbol-miscellaneous-white.png" style="align-content: center;" class="row" alt="">
+          </div>
+          <!-- END SIDEBAR USERPIC -->
+          <!-- SIDEBAR USER TITLE -->
+          <div class="profile-usertitle">
+            <div class="profile-usertitle-name">
+              Mi Perfil
+            </div>
+            <div class="profile-usertitle-job">
+              Usuario
+            </div>
+          </div>
+          <!-- END SIDEBAR USER TITLE -->
+          <!-- SIDEBAR BUTTONS -->
+          
+          <!-- END SIDEBAR BUTTONS -->
+          <!-- SIDEBAR MENU -->
+          <div id="" style="padding: 0px" class="cardL">
+            <ul class="col-md-9" >
+              <div  >
+                  
+                    <label class="col-0" style="width: 65px;" for="nom">Nombre:</label>
+                    <input disabled class="form-control" type="text" id="nom" name="nom" > 
+              </div>
+              <div style="padding-top: 7px;">
+                
+                  <label style="width: 65px;" for="ape">Apellido:</label>
+                  <input disabled class="form-control" type="text" id="ape" name="ape" >
+               
+              </div>
+              <div style="padding-top: 7px;">
+                
+                  <label style="width: 65px;" for="ed">Edad:</label>
+                  <input disabled class=" form-control" type="text" id="ed" name="ed" >
+               
+              </div>
+              <div style="padding-top: 7px;">
+                
+                  <label style="width: 65px;" for="mail">Email:</label>
+                  <input disabled class=" form-control" type="text" id="mail" name="mail" >
+              </div>
+              <div style="padding-top: 7px;">
+                
+                  <label style="width: 65px;" for="tel">Telefono:</label>
+                   <input disabled class="form-control" type="text" id="tel" name="tel" >
+            </ul>
+
+            
+          </div>
+
+          <div class="profile-userbuttons">
+            <div style="font-weight: bold;" >  Editar
+            <label class="switch"> 
+              <input id="edit" type="checkbox" > 
+              <span class="slider round"></span>
+            </label></div>
+            <button type="button" style="width: 80px;" id="guardarPerfil" class="btn btn-success btn-sm">Guardar</button>
+          </div>
+          <!-- END MENU -->
+        </div>
+      </div>
+      
     </div>
   </div>
+
+
+
+
+
+  
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>

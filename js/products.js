@@ -61,23 +61,37 @@ function showList(){
         if (((minCost == undefined) || (minCost != undefined && parseInt(mostrando.cost) >= minCost)) &&
             ((maxCost == undefined) || (maxCost != undefined && parseInt(mostrando.cost) <= maxCost))){
                 
-        listaAutos += `
-        <div id="`+pSelect+`"  class="list-group-item list-group-item-action" onclick="showID(this.id); window.location ='product-info.html';">
-            <div class="col-7" id="productSelect" onclick="window.location ='product-info.html'; showID(this.id) ">
-            <img src="` + mostrando.imgSrc + `" alt="` + mostrando.description + `" class="img-thumbnail">
+
+             
+            
+
+
+
+            listaAutos += `
+            <div style="margin-top: 5px;"  class="col-md-4">
+        <div id="`+pSelect+`"  class=" card shadow-sm custom-card" onclick="showID(this.id); window.location ='product-info.html';">
+            <div class="col-14" id="productSelect" onclick="window.location ='product-info.html'; showID(this.id) ">
+            <img src="` + mostrando.imgSrc + `" alt="` + mostrando.description + `" class="bd-placeholder-img card-img-top">
+            </div>
+        
+        <div class="col">
+        <div class="d-flex w-100 justify-content-between" onclick="">
+                
+           <div style="margin-top: 5px;" class="col-md-11"> <h4>`+ mostrando.name +`</h4>     
+            <p class="text-muted"> `+ mostrando.currency + mostrando.cost +`</p> 
+            <p style="height: 70px;"> `+ mostrando.description +`</p> 
+            <p class="text-muted">Cantidad disponible: `+ mostrando.soldCount + `<p></div>
+            <br>
+            </div>
+            </div>
+            
             </div>
         </div>
-        <div class="list-group-item list-group-item-action" onclick="">
-            <h4>`+ mostrando.name +`</h4> 
-            <p> `+ mostrando.currency + mostrando.cost +`</p>
-            <p> `+ mostrando.description +`</p>
-            <p> `+ mostrando.soldCount + `<p>
-            <br>
-            </div>
-            <br>
-            <br>
         </div>
+        
         `
+
+        
         
         document.getElementById("listado").innerHTML = listaAutos; 
         
