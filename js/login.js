@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function(e){
 
     sessionStorage.removeItem("user")
     
-    document.getElementById("idIngresar").addEventListener("click", formularioV); })
+    document.getElementById("idIngresar").addEventListener("click", formV); })
         
-        function formularioV(ev) {
+        function formV(ev) {
 
             ev.preventDefault();
 
